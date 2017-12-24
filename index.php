@@ -1,6 +1,6 @@
 <?php 
 
-$fruits = ['apple', 'orange'];
+$fruits = ['apple', 'orange', 'banana'];
 
 ?>
 
@@ -13,11 +13,25 @@ $fruits = ['apple', 'orange'];
   <title>Document</title>
 </head>
 <body>
-  <h1>All fruits </h1>
+  <h1>All fruits using foreach</h1>
   <ul>
   <?php foreach($fruits as $fruit) : ?>
     <li><?php echo $fruit ?></li>
   <?php endforeach; ?>
+  </ul>
+  <h1>All fruits using for loop</h1>
+  <ul>
+  <?php for($i = 0; $i < count($fruits); $i++) : ?>
+    <li><?php echo $fruits[$i] ?></li>
+  <?php endfor; ?>
+  </ul>
+
+  <h1>All fruits using while loop</h1>
+  <ul>
+  <?php $i = 0; ?>
+  <?php while($i < count($fruits)) : ?>
+    <li><?php echo $fruits[$i] ?></li>
+  <?php $i++; endwhile; ?>
   </ul>
 </body>
 </html>
